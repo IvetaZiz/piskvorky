@@ -1,15 +1,54 @@
 .body {
-  background-image: linear-gradient(to bottom, #615dad 30%, #ffc8da 70%);
+  background: linear-gradient(to bottom, #615dad 20%, #ffc8da 80%);
+}
+.body__center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 320px;
+  height: 500px;
+  position: relative;
+  top: 70px;
+  left: 500px;
+}
+.foto {
+  border-radius: 15px 15px 0px 0px;
 }
 .Game__info {
   background-color: #283e50;
   color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: fit-content;
+  text-align: center;
 }
-.Game__rules {
+.Game__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lobster', cursive;
+}
+.Game__rules--btn {
   background-color: #1fcca4;
   color: #ffffff;
+  font-family: sans-serif;
+  height: 50px;
+  border: 0px;
 }
-.Game__play {
+.Game__play--btn {
   background-color: #0197f6;
   color: #ffffff;
+  font-family: sans-serif;
+  height: 50px;
+  border: 0px;
+}
+.Game__footer {
+  display: flex;
+  flex-direction: column;
+}
+.Game__description {
+  display: flex;
+  flex-wrap: justify;
+  font-family: sans-serif;
 }
