@@ -9,10 +9,19 @@
   background-attachment: fixed;
   width: 330px;
   height: 500px;
-  position: relative;
-  left: 40%;
+  position: absolute;
+  left: 50%;
   margin-bottom: 450px;
   margin-top: 50px;
+  text-align: center;
+}
+.body__2 {
+  background: linear-gradient(#615dad, #ffc8da);
+  background-repeat: no-repeat;
+  height: 100%;
+  background-attachment: fixed;
+  display: flex;
+  left: 50%;
 }
 .body__center {
   display: flex;
@@ -72,4 +81,10 @@
   padding-left: 5px;
   padding-right: 5px;
   padding-bottom: 10px;
+}
+
+ol {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 5px 10px 5px;
 }
