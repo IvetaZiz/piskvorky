@@ -7,11 +7,9 @@
   background-repeat: no-repeat;
   height: 100%;
   background-attachment: fixed;
-  width: 330px;
-  height: 500px;
   position: absolute;
-  left: 50%;
-  margin-bottom: 450px;
+  width: 330px;
+  left: 40%;
   margin-top: 50px;
   text-align: center;
 }
@@ -21,7 +19,8 @@
   height: 100%;
   background-attachment: fixed;
   display: flex;
-  left: 50%;
+  position: absolute;
+  left: 40%;
 }
 .body__center {
   display: flex;
@@ -47,7 +46,7 @@
   font-family: 'Lobster', cursive;
   font-size: 40px;
 }
-.Game__rules {
+.buttons__rules {
   background-color: #1fcca4;
   color: #ffffff;
   font-family: sans-serif;
@@ -55,10 +54,10 @@
   border: 0px;
   font-size: 17px;
 }
-.Game__rules:hover {
+.buttons__rules:hover {
   background-color: #1cbb96;
 }
-.Game__play {
+.buttons__play {
   background-color: #0197f6;
   color: #ffffff;
   font-family: sans-serif;
@@ -66,7 +65,7 @@
   border: 0px;
   font-size: 17px;
 }
-.Game__play:hover {
+.buttons__play:hover {
   background-color: #0090e9;
 }
 .Game__footer {
@@ -75,14 +74,18 @@
 }
 .Game__description {
   display: flex;
-  flex-wrap: justify;
   font-family: sans-serif;
   font-size: 15px;
   padding-left: 5px;
   padding-right: 5px;
   padding-bottom: 10px;
 }
-
+.description {
+  text-align: left;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
 ol {
   display: flex;
   flex-direction: column;
