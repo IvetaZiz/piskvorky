@@ -7,9 +7,9 @@
   background-repeat: no-repeat;
   height: 100%;
   background-attachment: fixed;
-  position: absolute;
+  flex-direction: column;
   width: 330px;
-  left: 40%;
+  margin: auto;
   margin-top: 50px;
   text-align: center;
 }
@@ -18,9 +18,9 @@
   background-repeat: no-repeat;
   height: 100%;
   background-attachment: fixed;
-  display: flex;
-  position: absolute;
-  left: 40%;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 50px;
 }
 .body__center {
   display: flex;
@@ -29,15 +29,19 @@
 }
 .foto {
   border-radius: 10px 10px 0px 0px;
+  width: 330px;
 }
 .Game__info {
   background-color: #283e50;
+  font-family: sans-serif;
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  width: 330px;
   height: fit-content;
   text-align: center;
+}
+.border {
+  border-radius: 10px 10px 0px 0px;
 }
 .Game__title {
   display: flex;
@@ -45,14 +49,17 @@
   justify-content: center;
   font-family: 'Lobster', cursive;
   font-size: 40px;
+  border: 10px 10px 0px 0px;
 }
 .buttons__rules {
   background-color: #1fcca4;
   color: #ffffff;
   font-family: sans-serif;
-  height: 50px;
   border: 0px;
   font-size: 17px;
+  text-decoration: none;
+  text-align: center;
+  padding: 4%;
 }
 .buttons__rules:hover {
   background-color: #1cbb96;
@@ -61,9 +68,11 @@
   background-color: #0197f6;
   color: #ffffff;
   font-family: sans-serif;
-  height: 50px;
   border: 0px;
   font-size: 17px;
+  text-decoration: none;
+  text-align: center;
+  padding: 4%;
 }
 .buttons__play:hover {
   background-color: #0090e9;
@@ -79,15 +88,46 @@
   padding-left: 5px;
   padding-right: 5px;
   padding-bottom: 10px;
+  background-color: #283e50;
+  color: #ffffff;
+  flex-direction: column;
+  height: fit-content;
+  text-align: center;
 }
 .description {
   text-align: left;
   color: #ffffff;
   display: flex;
   flex-direction: column;
+  line-height: 1.6;
+  font-size: 16px;
+  padding: 10px 15px 10px 10px;
 }
-ol {
-  display: flex;
-  flex-direction: column;
-  padding: 10px 5px 10px 5px;
+figcaption {
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  text-align: center;
+  padding: 5px 10px 10px 10px;
 }
+.svg {
+  filter: invert(100%);
+  width: 1em;
+  height: 1em;
+}
+img {
+  width: 100%;
+}
+
+@media (min-width: 800px) {
+  .pictures {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  figure {
+    flex-basis: calc(50% - 40px);
+    margin: 20px;
+  }
+  .body__2 {
+    max-width: 800px;
+  }
+} ;
