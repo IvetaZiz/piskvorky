@@ -187,5 +187,5 @@ button {
 }
 button:hover,
 button:focus {
-  background-color: rgba (240, 200, 240, 0.4);
+  background-color: rgba(240, 200, 240, 0.4);
 }
