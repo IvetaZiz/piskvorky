@@ -184,9 +184,8 @@ button {
   background-color: rgba(220, 200, 220, 0.4);
   width: 10%;
   aspect-ratio: 1 / 1;
-  cursor: pointer;
 }
-button :hover,
-:focus {
+button:hover,
+button:focus {
   background-color: rgba (240, 200, 240, 0.4);
 }
