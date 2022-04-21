@@ -189,3 +189,13 @@ button:hover,
 button:focus {
   background-color: rgba(240, 200, 240, 0.4);
 }
+.button__active__circle {
+  background-image: url('images/circle.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.button__active__cross {
+  background-image: url('images/cross.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
