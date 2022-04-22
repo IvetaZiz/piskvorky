@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
 }
-
 .body {
   background: linear-gradient(#615dad, #ffc8da);
   background-repeat: no-repeat;
@@ -116,6 +115,10 @@ figcaption {
   width: 1em;
   height: 1em;
 }
+#round {
+  position: relative;
+  top: 3px;
+}
 img {
   width: 100%;
 }
@@ -184,6 +187,7 @@ button {
   background-color: rgba(220, 200, 220, 0.4);
   width: 10%;
   aspect-ratio: 1 / 1;
+  background-size: 1px;
 }
 button:hover,
 button:focus {
@@ -193,9 +197,13 @@ button:focus {
   background-image: url('images/circle.svg');
   background-position: center;
   background-repeat: no-repeat;
+  transition: background-size 0.25s;
+  background-size: 30px;
 }
 .button__active__cross {
   background-image: url('images/cross.svg');
   background-position: center;
   background-repeat: no-repeat;
+  transition: background-size 0.25s;
+  background-size: 30px;
 }
