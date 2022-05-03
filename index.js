@@ -3,26 +3,26 @@ console.log('Funguju');
 let activePlayer = 'circle';
 const buttonChange = document.querySelectorAll('button');
 const playerChange = document.querySelector('.svg');
-for (let i = 0; i < buttonChange.length; i++) {
-  buttonChange[i].addEventListener('click', (event) => {
+
+const finalTurn = (event) => {
+  if (activePlayer === 'circle') {
+    activePlayer = 'cross';
+    playerChange.src = 'images/cross.svg';
     event.target.classList.add('button__active__circle');
-    if (activePlayer === 'circle') {
-      event.target.disabled = true;
-      activePlayer = 'cross';
-      playerChange.src = 'images/cross.svg';
-    } else {
-      event.target.classList.add('button__active__cross');
-      activePlayer = 'circle';
-      playerChange.src = 'images/circle.svg';
-    }
-    const winnerIs = isWinningMove(buttonChange[i]);
-    if (winnerIs) {
-      const finalTurn = isWinningMove(buttonChange[i]);
-      alert(`Vítězem se stal ${finalTurn}`);
-    }
-    console.log(isWinningMove(buttonChange[i]));
-  });
-}
+  } else {
+    activePlayer = 'circle';
+    playerChange.src = 'images/circle.svg';
+    event.target.classList.add('button__active__cross');
+  }
+  event.target.disabled = true;
+  const winnerIs = isWinningMove(event.target);
+  if (winnerIs) {
+    alert(`Vítězem se stal/o ${winnerIs}`);
+  }
+  console.log(isWinningMove(event.target));
+};
+for (let i = 0; i < buttonChange.length; i++)
+  buttonChange[i].addEventListener('click', finalTurn);
 // Přichystej funkci, getSymbol(field), která pro DOM element políčka s křížkem vrátí řetězec 'cross', pro kroužek 'circle' a pro neobsazené políčko hodnotu undefined.
 
 const getSymbol = (field) => {
