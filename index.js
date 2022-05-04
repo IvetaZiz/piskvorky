@@ -15,20 +15,22 @@ const finalTurn = (event) => {
     event.target.classList.add('button__active__cross');
   }
   event.target.disabled = true;
+
   const winnerIs = isWinningMove(event.target);
   if (winnerIs) {
-    alert(`Vítězem se stal/o ${winnerIs}`);
+    alert(`Vítězem je kolečko ${winnerIs} `);
   }
   console.log(isWinningMove(event.target));
 };
+
 for (let i = 0; i < buttonChange.length; i++)
   buttonChange[i].addEventListener('click', finalTurn);
 // Přichystej funkci, getSymbol(field), která pro DOM element políčka s křížkem vrátí řetězec 'cross', pro kroužek 'circle' a pro neobsazené políčko hodnotu undefined.
 
 const getSymbol = (field) => {
-  if (field.classList.contains('.button__active__cross')) {
+  if (field.classList.contains('button__active__cross')) {
     return 'křížek';
-  } else if (field.classList.contains('.button__active__circle')) {
+  } else if (field.classList.contains('button__active__circle')) {
     return 'kolečko';
   }
 };
